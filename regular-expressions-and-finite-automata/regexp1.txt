@@ -1,0 +1,4 @@
+echo '^(b*ab*a|a*b+)*$' > regexp1.txt
+echo "aaaab" | grep -E -x "$(cat regexp1.txt)"
+echo "bbba" | grep -E -x "$(cat regexp1.txt)"
+echo "bbbb" | grep -E -x "$(cat regexp1.txt)"
